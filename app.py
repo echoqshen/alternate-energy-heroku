@@ -7,6 +7,10 @@ from random import randrange
 from pymongo import MongoClient
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return 'Hello ToooTooo!'
+
 @app.route("/user")
 def users():
     my_user = os.environ['user']
