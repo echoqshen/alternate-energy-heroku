@@ -7,8 +7,13 @@ from random import randrange
 from pymongo import MongoClient
 app = Flask(__name__)
 
+@app.route("/user")
+def users():
+    my_user = os.environ['user']
+    msg = "user: " + my_user
+    return msg
+
 @app.route("/mongo_data")
-if __name__ == '__main__':
 def mongo_data():
 
     client = MongoClient("")
@@ -29,6 +34,13 @@ def vars():
     my_vars = os.environ
     my_vars_dict = dict(my_vars)
     return jsonify(my_vars_dict)
+
+
+@app.route("/random")
+def random():
+    
+    ret_val = "your random number is: " + str(randrange(100))
+    return ret_val
 
 if __name__ == '__main__':
     app.run()
