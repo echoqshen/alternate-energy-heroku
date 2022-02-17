@@ -17,7 +17,7 @@ Werkzeug==2.0.3
 wincertstore==0.2
 zipp==3.6.0
 
-Flask==0.10.1
+# Flask==0.10.1
 13gunicorn==19.3.0
 #itsdangerous==0.24
 #Jinja2==2.7.3
